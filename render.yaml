@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: spellcheck-ocr
+    runtime: python
+    env: docker
+    buildCommand: ""
+    plan: free
+    startCommand: python app.py
+    envVars:
+      - key: FLASK_ENV
+        value: production
